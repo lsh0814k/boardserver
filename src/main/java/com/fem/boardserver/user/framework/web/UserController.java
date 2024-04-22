@@ -1,6 +1,6 @@
 package com.fem.boardserver.user.framework.web;
 
-import com.fem.boardserver.common.LoginUserId;
+import com.fem.boardserver.common.annotation.LoginUserId;
 import com.fem.boardserver.user.application.UserService;
 import com.fem.boardserver.user.framework.web.dto.PasswordChangeRequest;
 import com.fem.boardserver.user.framework.web.dto.PasswordRequest;
