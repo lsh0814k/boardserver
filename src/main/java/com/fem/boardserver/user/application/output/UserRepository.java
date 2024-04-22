@@ -9,5 +9,5 @@ public interface UserRepository {
 
     Optional<User> findByUserId(String userId);
 
-    User getByUserIdAndPassword(String userId, String password);
+    User getUserIdAndStatusEqualsActive(String userId);
 }
