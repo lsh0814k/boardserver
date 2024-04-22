@@ -1,6 +1,6 @@
 jwt:
   access-token-expiration-millis: 600000
-  secret-key: MGRmYjU5ZDMtNTJkMi00OTM2LTkzOTgtZjM0YmFhZTVhOGFl
+  secret-key: ${secret_key}
 
 spring:
   h2:
