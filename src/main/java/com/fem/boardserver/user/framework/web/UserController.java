@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.*;
 public class UserController {
     private final UserService userService;
 
-    @InitBinder
+    @InitBinder("passwordChangeValidator")
     void initPasswordValidator(WebDataBinder webDataBinder) {
         webDataBinder.addValidators(new PasswordChangeValidator());
     }

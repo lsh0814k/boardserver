@@ -2,6 +2,7 @@ package com.fem.boardserver.user.framework.repository;
 
 import com.fem.boardserver.user.application.output.UserRepository;
 import com.fem.boardserver.user.domain.User;
+import com.fem.boardserver.user.domain.vo.Status;
 import com.fem.boardserver.user.exception.ResourceNotFoundException;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -26,11 +27,11 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    public User getByUserIdAndPassword(String userId, String password) {
-        Optional<User> user = userJpaRepository.findByUserIdAndPassword(userId, password);
+    public User getUserIdAndStatusEqualsActive(String userId) {
+        Optional<User> user = userJpaRepository.findByUserIdAndStatus(userId, Status.ACTIVE);
         if (user.isEmpty()) {
-            log.error("잘못된 아이디와 비밀번호 입니다. {}", userId);
-            throw new ResourceNotFoundException("아이디와 비밀번호를 확인해 주세요.");
+            log.error("잘못된 아이디 혹은 활성화되지 않은 유저 입니다. {}", userId);
+            throw new ResourceNotFoundException("잘못된 아이디 혹은 활성화되지 않은 유저 입니다.");
         }
 
         return user.get();

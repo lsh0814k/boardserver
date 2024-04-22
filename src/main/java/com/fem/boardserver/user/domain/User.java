@@ -14,6 +14,7 @@ import java.time.LocalDateTime;
 import static jakarta.persistence.EnumType.STRING;
 import static lombok.AccessLevel.PROTECTED;
 
+@Table(name = "Users")
 @Getter
 @Entity
 @Builder
