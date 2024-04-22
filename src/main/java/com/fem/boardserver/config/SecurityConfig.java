@@ -2,7 +2,7 @@ package com.fem.boardserver.config;
 
 import com.fem.boardserver.login.filter.JwtAuthenticationFilter;
 import com.fem.boardserver.login.filter.JwtAuthorizationFilter;
-import com.fem.boardserver.login.service.JwtService;
+import com.fem.boardserver.common.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.autoconfigure.security.servlet.PathRequest;
 import org.springframework.context.annotation.Bean;

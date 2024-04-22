@@ -3,7 +3,7 @@ package com.fem.boardserver.common.interceptor;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fem.boardserver.common.annotation.Auth;
 import com.fem.boardserver.login.dto.LoginResponse;
-import com.fem.boardserver.login.service.JwtService;
+import com.fem.boardserver.common.JwtService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;

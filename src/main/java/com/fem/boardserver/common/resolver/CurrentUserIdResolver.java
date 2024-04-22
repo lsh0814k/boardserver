@@ -1,7 +1,7 @@
 package com.fem.boardserver.common.resolver;
 
 import com.fem.boardserver.common.annotation.LoginUserId;
-import com.fem.boardserver.login.service.JwtService;
+import com.fem.boardserver.common.JwtService;
 import lombok.RequiredArgsConstructor;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.core.MethodParameter;

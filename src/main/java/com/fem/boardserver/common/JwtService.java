@@ -1,4 +1,4 @@
-package com.fem.boardserver.login.service;
+package com.fem.boardserver.common;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;

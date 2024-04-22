@@ -2,7 +2,7 @@ package com.fem.boardserver.login.filter;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fem.boardserver.login.dto.LoginResponse;
-import com.fem.boardserver.login.service.JwtService;
+import com.fem.boardserver.common.JwtService;
 import com.fem.boardserver.login.dto.LoginRequest;
 import com.fem.boardserver.login.service.user.UserToken;
 import jakarta.servlet.FilterChain;

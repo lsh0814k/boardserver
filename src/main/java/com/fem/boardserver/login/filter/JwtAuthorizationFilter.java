@@ -1,7 +1,7 @@
 package com.fem.boardserver.login.filter;
 
 import com.auth0.jwt.exceptions.TokenExpiredException;
-import com.fem.boardserver.login.service.JwtService;
+import com.fem.boardserver.common.JwtService;
 import com.fem.boardserver.login.service.user.LoginUserInfo;
 import com.fem.boardserver.login.service.user.UserToken;
 import com.fem.boardserver.login.util.JwtErrorMessage;
