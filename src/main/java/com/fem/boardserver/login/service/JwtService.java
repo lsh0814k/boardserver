@@ -79,4 +79,12 @@ public class JwtService {
                 .getClaim("userId")
                 .asString();
     }
+
+    public String getUserRole(String token) {
+        return JWT.require(getKeyAlgorithm(key))
+                .build()
+                .verify(token)
+                .getClaim("role")
+                .asString();
+    }
 }
