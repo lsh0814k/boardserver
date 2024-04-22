@@ -72,7 +72,7 @@ public class JwtService {
         return LoginUserInfo.from(loginUserDto);
     }
 
-    private String getUsername(String token) {
+    public String getUsername(String token) {
         return JWT.require(getKeyAlgorithm(key))
                 .build()
                 .verify(token)
