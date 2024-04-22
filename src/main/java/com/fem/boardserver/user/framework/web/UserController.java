@@ -1,5 +1,6 @@
 package com.fem.boardserver.user.framework.web;
 
+import com.fem.boardserver.common.LoginUserId;
 import com.fem.boardserver.user.application.UserService;
 import com.fem.boardserver.user.framework.web.dto.PasswordChangeRequest;
 import com.fem.boardserver.user.framework.web.dto.PasswordRequest;
@@ -31,15 +32,15 @@ public class UserController {
                 .build();
     }
 
-    @DeleteMapping("/{userId}")
-    public ResponseEntity<String> deleteUser(@PathVariable String userId, @RequestBody PasswordRequest passwordRequest) {
+    @DeleteMapping
+    public ResponseEntity<String> deleteUser(@LoginUserId String userId, @RequestBody PasswordRequest passwordRequest) {
         userService.deleteUser(userId, passwordRequest.getPassword());
         return ResponseEntity.status(HttpStatus.OK)
                 .build();
     }
 
-    @PatchMapping("/{userId}/password")
-    public ResponseEntity<String> changePassword(@PathVariable String userId, @RequestBody PasswordChangeRequest changePasswordRequest) {
+    @PatchMapping("/password")
+    public ResponseEntity<String> changePassword(@LoginUserId String userId, @RequestBody PasswordChangeRequest changePasswordRequest) {
         userService.updatePassword(userId, changePasswordRequest.getBeforePassword(), changePasswordRequest.getNewPassword());
         return ResponseEntity.status(HttpStatus.OK)
                 .build();
